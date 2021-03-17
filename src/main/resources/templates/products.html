@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Products List</title>
+<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <style type="text/css">
+        .jumbotron>h1 {
+            text-align: center;
+            color: black;
+            font-family: Brush Script MT;
+            font-size: 99px;
+            text-shadow: 2.8px 2px darkgray;
+        }
+
+        .jumbotron>p {
+            text-align: center;
+            font-family: Arial Black;
+            font-size: 35px;
+            text-shadow: 2.8px 2px darkgray;
+        }
+
+        .nav {
+            background-color: #3C3F2D;
+        }
+
+        #forms-container {
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 50px;
+            border: 2px black;
+            border-style: inset;
+            border-radius: 10px;
+        }
+
+        .toplogo {
+            font-family: Brush Script MT;
+        }
+
+        .carousel-inner img {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+
+
+</head>
+<body>
+    <div class="text-center container-fluid p-0 bg-light">
+        <div class="jumbotron jumbotron-fluid">
+            <h1>Products List</h1>
+            <p>- A Start -</p>
+        </div>
+    </div>
+        <div class="text-center container-fluid p-0 bg-light">
+<table class="table table-dark table-hover">
+        <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Description</th>
+        </tr>
+        <tr th:each="products : ${products}">
+            <td th:text="${products.prodName}">Name</td>
+            <td th:text="${products.prodDesc}">Description</td>
+        </tr>
+    </table>
+    </div>
+</body>
+</html>
