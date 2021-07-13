@@ -1,5 +1,5 @@
 # Product
-This is a Web application built with spring boot and thymeleaf and containerized with docker
+This is a Web application built with spring boot and thymeleaf and containerized with docker and yes. 
 
 # Run the application from command line
 1. Traverse to the cloned directory
